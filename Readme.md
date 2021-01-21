@@ -18,3 +18,27 @@ arr.push(4, 5, 6);
 ```
 let arr = [..."123456"]; // ["1", "2", "3", "4", "5", "6"]
 ```
+
+### Converting Array-like Objects to Arrays
+JavaScript has "Array-like Objects", which are Object representations of Arrays with a length property. For example:
+```
+var realArray = ['a', 'b', 'c']; var arrayLike = {
+  0: 'a',
+  1: 'b',
+  2: 'c',
+  length: 3
+};
+```
+
+Common examples of Array-like Objects are the arguments object in functions and HTMLCollection or NodeList objects returned from methods like document.getElementsByTagName or document.querySelectorAll.
+However, one key difference between Arrays and Array-like Objects is that Array-like objects inherit from `Object.prototype` instead of `Array.prototype`. This means that Array-like Objects can't access common Array
+prototype methods like forEach(), push(), map(), filter(), and slice():
+```
+var parent = document.getElementById('myDropdown');
+var desiredOption = parent.querySelector('option[value="desired"]'); var domList = parent.children;
+domList.indexOf(desiredOption); // Error! indexOf is not defined. domList.forEach(function() {
+arguments.map(/* Stuff here */) // Error! map is not defined. }); // Error! forEach is not defined.
+function func() { console.log(arguments);
+}
+func(1, 2, 3); // → [1, 2, 3]
+```
