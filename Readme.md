@@ -47,3 +47,31 @@ let arr = [..."123456"]; // ["1", "2", "3", "4", "5", "6"]
 
 ## Objects
 Variables that are assigned a non-primitive value are given a reference to that value. That reference points to the object’s location in memory. The variables don’t actually contain the value.
+
+## Scope
+* Let's start by looking at what would happen if we used `var`
+```
+var printsToBeExecuted = [];
+
+for (var i = 0; i < 3; i++) {  
+  printsToBeExecuted.push(() => console.log(i));
+}
+
+printsToBeExecuted.forEach(f => f());  
+// Output: 3, 3, 3
+```
+Again, if you're used to block scope, this would feel a bit odd. You would expect `0, 1, 2` right?
+
+The explanation is simply that a loop is not a scope when using `var`. So instead of creating a local variable `i` for each increment, it'll end up printing the final value for the variable for all the functions.
+
+```
+var printsToBeExecuted = [];
+
+for (let i = 0; i < 3; i++) {  
+  printsToBeExecuted.push(() => console.log(i));
+}
+
+printsToBeExecuted.forEach(f => f());  
+// Output: 0, 1, 2
+```
+
