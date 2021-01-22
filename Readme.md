@@ -8,7 +8,7 @@ new Array(n + 1).join(myString); // Returns "abcabcabc"
 
 ## Arrays
 ### Converting Array-like Objects to Arrays
-JavaScript has "Array-like Objects", which are Object representations of Arrays with a length property. For example:
+* JavaScript has "Array-like Objects", which are Object representations of Arrays with a length property. For example:
 ```
 var realArray = ['a', 'b', 'c']; var arrayLike = {
   0: 'a',
@@ -46,7 +46,7 @@ let arr = [..."123456"]; // ["1", "2", "3", "4", "5", "6"]
 ```
 
 ## Objects
-Variables that are assigned a non-primitive value are given a reference to that value. That reference points to the object’s location in memory. The variables don’t actually contain the value.
+* Variables that are assigned a non-primitive value are given a reference to that value. That reference points to the object’s location in memory. The variables don’t actually contain the value.
 
 ## Scope
 * Let's start by looking at what would happen if we used `var`
