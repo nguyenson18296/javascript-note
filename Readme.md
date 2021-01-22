@@ -42,3 +42,6 @@ function func() { console.log(arguments);
 }
 func(1, 2, 3); // → [1, 2, 3]
 ```
+
+## Objects
+`Variables that are assigned a non-primitive value are given a reference to that value. That reference points to the object’s location in memory. The variables don’t actually contain the value.`
