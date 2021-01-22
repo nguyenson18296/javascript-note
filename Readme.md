@@ -5,20 +5,8 @@ In the general case, this should be done using a correct polyfill for the ES6 St
 var myString = "abc"; var n = 3;
 new Array(n + 1).join(myString); // Returns "abcabcabc"
 ```
-### Spread operator
-With ES6, you can use spreads to separate individual elements into a comma-separated syntax:
-```
-let arr = [1, 2, 3, ...[4, 5, 6]]; // [1, 2, 3, 4, 5, 6]
 
-// in ES < 6, the operations above are equivalent to
-arr = [1, 2, 3];
-arr.push(4, 5, 6);
-```
-
-```
-let arr = [..."123456"]; // ["1", "2", "3", "4", "5", "6"]
-```
-
+## Arrays
 ### Converting Array-like Objects to Arrays
 JavaScript has "Array-like Objects", which are Object representations of Arrays with a length property. For example:
 ```
@@ -43,5 +31,19 @@ function func() { console.log(arguments);
 func(1, 2, 3); // → [1, 2, 3]
 ```
 
+### Spread operator
+With ES6, you can use spreads to separate individual elements into a comma-separated syntax:
+```
+let arr = [1, 2, 3, ...[4, 5, 6]]; // [1, 2, 3, 4, 5, 6]
+
+// in ES < 6, the operations above are equivalent to
+arr = [1, 2, 3];
+arr.push(4, 5, 6);
+```
+
+```
+let arr = [..."123456"]; // ["1", "2", "3", "4", "5", "6"]
+```
+
 ## Objects
-`Variables that are assigned a non-primitive value are given a reference to that value. That reference points to the object’s location in memory. The variables don’t actually contain the value.`
+Variables that are assigned a non-primitive value are given a reference to that value. That reference points to the object’s location in memory. The variables don’t actually contain the value.
