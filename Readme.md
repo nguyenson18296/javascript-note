@@ -94,3 +94,5 @@ var bar = function () {
 };
 console.log(bar); // [Function: bar]
 ```
+### What is the difference between == and ===?
+2 dấu bằng thì ép kiểu rồi mới so sánh, 3 dấu bằng thì so sánh luôn chứ không ép kiểu
