@@ -74,4 +74,23 @@ for (let i = 0; i < 3; i++) {
 printsToBeExecuted.forEach(f => f());  
 // Output: 0, 1, 2
 ```
+### Explain "hoisting".
+only the declaration is hoisted, the assignment (if there is one), will stay where it is.
+Function declarations have the body hoisted while the function expressions (written in the form of variable declarations) only has the variable declaration hoisted.
+```
+// Function Declaration
+console.log(foo); // [Function: foo]
+foo(); // 'FOOOOO'
+function foo() {
+  console.log('FOOOOO');
+}
+console.log(foo); // [Function: foo]
 
+// Function Expression
+console.log(bar); // undefined
+bar(); // Uncaught TypeError: bar is not a function
+var bar = function () {
+  console.log('BARRRR');
+};
+console.log(bar); // [Function: bar]
+```
