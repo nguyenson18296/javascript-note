@@ -98,7 +98,9 @@ console.log(bar); // [Function: bar]
 2 dấu bằng thì ép kiểu rồi mới so sánh, 3 dấu bằng thì so sánh luôn chứ không ép kiểu
 
 
-###
+### Bitwise XOR (^)
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR
+
 Given an array of integers, where all elements but one occur twice, find the unique element.
 a = [1, 2, 3, 4, 3, 2, 1]
 
