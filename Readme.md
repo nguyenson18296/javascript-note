@@ -96,3 +96,23 @@ console.log(bar); // [Function: bar]
 ```
 ### What is the difference between == and ===?
 2 dấu bằng thì ép kiểu rồi mới so sánh, 3 dấu bằng thì so sánh luôn chứ không ép kiểu
+
+
+###
+Given an array of integers, where all elements but one occur twice, find the unique element.
+a = [1, 2, 3, 4, 3, 2, 1]
+
+```
+lonelyinteger(a) { return a.reduce((a, b) => a ^ b) }
+```
+```
+I learn better with examples, so here I go trying to explain to my future self.
+
+Let's say we have an array with: [1, 2, 2, 3, 1] We, know just by eyeballing it, the lonely integer is: 3 but we want to solve it using bit manipulation.
+
+Just for notes: bit for 1=001, for 2=010, for 3=011 to get the answer, we just simply XOR all the values, and the remainder would be the lonely integer. since if the same number is being XOR with that same number, it will get 0.
+
+back to example: first xor: 1^2 = 001^010 = 011 = 3 second xor (using the value from first xor): 3^2 = 011^010 = 001 = 1 third xor (using the value from previous xor): 1^3 = 001^011 = 010 = 2 last xor (using the value from previous xor): 2^1 = 010^001 = 011 = 3
+
+that's how we get the answer 3.
+```
