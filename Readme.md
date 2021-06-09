@@ -118,3 +118,8 @@ back to example: first xor: 1^2 = 001^010 = 011 = 3 second xor (using the value 
 
 that's how we get the answer 3.
 ```
+### Ví dụ về dùng Map, Set để giải thuật toán
+
+![image](https://user-images.githubusercontent.com/61957094/121404997-b8504100-c986-11eb-9270-4d06f0964b48.png)
+![image](https://user-images.githubusercontent.com/61957094/121405037-c1411280-c986-11eb-9a53-41cb2c5b2df4.png)
+)
