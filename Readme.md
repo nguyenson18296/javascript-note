@@ -154,7 +154,7 @@ function growingPlant(upSpeed, downSpeed, desiredHeight) {
 
 
 ##### ================================================================
-https://i.imgur.com/RbdkdPg.png
+![image](https://user-images.githubusercontent.com/61957094/121522516-63acd480-ca1f-11eb-9309-4558ddc03bf8.png)
 
 ```
 function longestDigitsPrefix(inputString) {
