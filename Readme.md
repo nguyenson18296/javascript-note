@@ -142,3 +142,12 @@ function differentSymbolsNaive(s) {
   return new Set(s).size
 }
 ```
+
+##### ================================================================
+![image](https://user-images.githubusercontent.com/61957094/121490927-b1194980-c9ff-11eb-8ba7-fb92f41dac83.png)
+
+```
+function growingPlant(upSpeed, downSpeed, desiredHeight) {
+    return upSpeed > desiredHeight ? 1 : Math.ceil((desiredHeight - upSpeed) / (upSpeed - downSpeed)) + 1;
+}
+```
