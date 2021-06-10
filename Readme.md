@@ -151,3 +151,13 @@ function growingPlant(upSpeed, downSpeed, desiredHeight) {
     return upSpeed > desiredHeight ? 1 : Math.ceil((desiredHeight - upSpeed) / (upSpeed - downSpeed)) + 1;
 }
 ```
+
+
+##### ================================================================
+https://i.imgur.com/RbdkdPg.png
+
+```
+function longestDigitsPrefix(inputString) {
+    return inputString.match(/^\d*/)[0]
+}
+```
