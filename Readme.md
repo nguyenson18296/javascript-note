@@ -133,3 +133,12 @@ function firstDigit(s) {
   return s.match(/\d/)[0]
 }
 ```
+
+##### ================================================================
+![image](https://user-images.githubusercontent.com/61957094/121466669-0181ae80-c9e2-11eb-85c4-cd37d3d767b6.png)
+
+```
+function differentSymbolsNaive(s) {
+  return new Set(s).size
+}
+```
