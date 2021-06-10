@@ -123,3 +123,13 @@ that's how we get the answer 3.
 ![image](https://user-images.githubusercontent.com/61957094/121404997-b8504100-c986-11eb-9270-4d06f0964b48.png)
 ![image](https://user-images.githubusercontent.com/61957094/121405037-c1411280-c986-11eb-9a53-41cb2c5b2df4.png)
 )
+
+### Những bài giải thuật toán hay
+##### ================================================================
+
+![image](https://user-images.githubusercontent.com/61957094/121464214-a8178080-c9dd-11eb-99b3-d0ea837a6229.png)
+```
+function firstDigit(s) {
+  return s.match(/\d/)[0]
+}
+```
